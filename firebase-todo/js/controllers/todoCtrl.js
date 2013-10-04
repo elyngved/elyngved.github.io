@@ -6,28 +6,6 @@
  * - retrieves and persists the model via the todoStorage service
  * - exposes the model to the template and provides event handlers
  */
- (
-   (region_id = 11)
-   AND
-   (
-     (
-       (NOT expired)
-       AND
-       (listing_type_id <> 2)
-     )
-     OR
- 	   (
- 	   	 funded AND
- 	     (listing_type_id = 2)
- 	   )
- 	 )
- 	 AND
- 	 (
- 	   (region_id = 11)
- 	   OR
- 	   (listing_type_id = 2)
- 	 )
- )
 
 todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, filterFilter, angularFire) {
 	$scope.todos = [];
